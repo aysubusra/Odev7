@@ -10,11 +10,11 @@ public enum Gezegen {
     URANUS("Uranüs", 7, 2871, 25559, 17.2),
     NEPTUNE("Neptün", 8, 4497, 24764, 16.1);
 
-    private String isim;
-    private int siralama;
-    private double uzaklik; // milyon km
-    private double yaricap; // km
-    private double donmeSuresi; // saat
+    public String isim;
+    public int siralama;
+    public double uzaklik; // milyon km
+    public double yaricap; // km
+    public double donmeSuresi; // saat
 
 
     Gezegen(String isim, int siralama, double uzaklik, double yaricap, double donmeSuresi) {
@@ -23,17 +23,5 @@ public enum Gezegen {
         this.uzaklik = uzaklik;
         this.yaricap = yaricap;
         this.donmeSuresi = donmeSuresi;
-    }
-
-    public static void main(String[] args) {
-        // Güneş sistemi gezegenlerini listeleme
-        for (Gezegen gezegen : Gezegen.values()) {
-            System.out.println("Gezegen Adı: " + gezegen.isim);
-            System.out.println("Sıralama: " + gezegen.siralama);
-            System.out.println("Uzaklık: " + gezegen.uzaklik + " milyon km");
-            System.out.println("Yarıçap: " + gezegen.yaricap + " km");
-            System.out.println("Dönme Süresi: " + gezegen.donmeSuresi + " saat");
-            System.out.println("------------------------------------");
-        }
     }
 }
